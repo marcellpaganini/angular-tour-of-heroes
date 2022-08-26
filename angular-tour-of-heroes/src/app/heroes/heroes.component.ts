@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdService } from '../ad/ad.service';
+import { AdItem } from '../ad/ad-item';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { MessageService } from '../message.service';
@@ -10,12 +12,13 @@ import { MessageService } from '../message.service';
 })
 
 export class HeroesComponent implements OnInit {
-
+  ads: AdItem[] = [];
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService, private messageService: MessageService) { }
+  constructor(private heroService: HeroService, private messageService: MessageService, private adService: AdService) { }
 
   ngOnInit(): void {
+    this.ads = this.adService.getAds();
     this.getHeroes();
   }
 

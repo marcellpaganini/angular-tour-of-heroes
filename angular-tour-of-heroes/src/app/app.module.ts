@@ -11,6 +11,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { AdDirective } from './ad/ad.directive';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
 
 const routes: Routes = [
   { path: 'detail/:id', component: HeroDetailComponent },
@@ -25,7 +27,9 @@ const routes: Routes = [
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdDirective,
+    AdBannerComponent
   ],
   imports: [
     BrowserModule,

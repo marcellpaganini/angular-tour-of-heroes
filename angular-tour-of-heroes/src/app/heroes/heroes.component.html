@@ -11,13 +11,17 @@
 </div>
 
 <ul class="heroes">
-  <ul class="heroes">
-    <li *ngFor="let hero of heroes">
-      <a routerLink="/detail/{{hero.id}}">
-        <span class="badge">{{hero.id}}</span> {{hero.name}}
-      </a>
-      <button type="button" class="delete" title="delete hero"
-        (click)="delete(hero)">x</button>
-    </li>
-  </ul>
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+    <button type="button" class="delete" title="delete hero"
+      (click)="delete(hero)">❌</button>
+  </li>
 </ul>
+
+<br />
+
+<div>
+  <app-ad-banner [ads]="ads"></app-ad-banner>
+</div>

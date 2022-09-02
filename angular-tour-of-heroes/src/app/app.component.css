@@ -37,6 +37,11 @@ h1 {
     color: #aaa;
     cursor: auto;
   }
+
+  .ugly {
+    margin: 1% red;
+    background-color: rgb(9, 110, 110);
+  }
   
   /* everywhere else */
   * {
